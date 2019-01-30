@@ -1,0 +1,53 @@
+﻿<!-- ko with: home -->
+<div class="jumbotron">
+    <h1>Developer Evaluation</h1>
+    <p class="lead">Calculate Mean Median Mode!</p>
+</div>
+<div class="row justify-content-center pb-5">
+    <div class="col-sm-12 col-md-6">
+        <form>
+            <div class="form-group">
+                <h1 class="h3 mb-3 font-weight-normal">List Of Numbers</h1>
+                <label for="inputNumberList" class="sr-only">List of numbers</label>
+                <input type="text" id="inputNumberList" class="form-control" placeholder="1,2,3..." required="" autofocus="">
+                <small id="emailHelp" class="form-text text-muted">Please enter a comma seperated list of numbers and click calculate</small>
+            </div>
+            
+            <button type="button" class="btn btn-lg btn-secondary float-left" id="btnClearForm">Clear</button>
+            <button class="btn btn-lg btn-primary float-right" type="submit" id="btnCalculate">Calculate</button>
+        </form>
+
+        @*<h2>Put Your Code in this DIV</h2>
+            <p>This section shows how you can call ASP.NET Web API to get the user details.</p>*@
+    </div>
+</div>
+
+<div class="row mt-5">
+    <div class="col-sm-12 col-md-4">
+        <div class="card bg-info text-white pb-5">
+            <div class="card-body text-center">
+                <h2 id="txtMean"></h2>
+                <h5>Mean</h5>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-4">
+        <div class="card bg-warning text-white pb-5">
+            <div class="card-body text-center">
+                <h2 id="txtMedian"></h2>
+                <h5>Median</h5>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-4">
+        <div class="card bg-danger text-white pb-5">
+            <div class="card-body text-center">
+                <h2 id="txtMode"></h2>
+                <h5>Mode</h5>
+            </div>
+        </div>
+    </div>
+</div>
+
+@Scripts.Render("~/Scripts/app.js")
+<!-- /ko -->
